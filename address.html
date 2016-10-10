@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.5.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="css/sm.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<title>乐天邦</title>
+	</head>
+	<body>
+		<div id="address-box">
+			<div class="header">
+				<p>添加收货地址</p>
+				<a href="index.html"><i class="fa fa-chevron-left"></i></a>
+			</div>
+			<div class="address-add">
+				<p class="name">
+					联系人
+					<input type="text" name="" id="name" value="" placeholder="收货人姓名" class="input"/>
+				</p>
+				<p class="sex">
+					<span>
+						<label class="label-left"><input name="sex" type="radio" value="" class="select" checked="checked"/>先生 </label> 
+						<label class="label-right"><input name="sex" type="radio" value="" class="select"/>女士</label> 
+					</span>
+				</p>
+				<p class="number">
+					手机号码
+					<input type="text" name="" id="number" value="" placeholder="乐天邦联系您的号码" class="input" maxlength="11"/>
+				</p>
+				<p class="city">
+					所在城市
+					<input type="text" name="" id="city-picker" value="" placeholder="请选择城市" class="input"/>
+				</p>
+				<p class="location">
+					详细地址
+					<input type="text" name="" id="location" value="" placeholder="请输入详细地址" class="input">
+				</p>
+			</div>
+			<div class="save">
+				<p>保存</p>
+			</div>
+			<div class="empty">
+				
+			</div>
+		</div>
+	</body>
+	<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/sm.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/sm-city-picker.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#city-picker").cityPicker({
+			    toolbarTemplate: '<header class="bar bar-nav">\
+			    <button class="button button-link pull-right close-picker">确定</button>\
+			    <h1 class="title">请选择地址</h1>\
+			    </header>'
+			});
+			
+			
+			
+			
+			$(".save").click(function (){
+				var valName = $("#name").val();
+				var valNumber = $("#number").val();
+				var valCity = $("#city-picker").val();
+				var valLocation = $("#location").val();
+//				alert(valName);
+				if ((valName=="")||(valNumber=="")||(valCity=="")||(valLocation=="")){
+					alert("您还有信息未填完，请完善所有信息");
+				}else{
+					alert("保存成功");
+				}
+			})
+		});
+	</script>
+</html>

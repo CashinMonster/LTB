@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.5.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<title>乐天邦</title>
+	</head>
+	<body>
+		<div id="address-box">
+			<div class="header">
+				<p>选择收货地址</p>
+				<a href="index.html"><i class="fa fa-chevron-left"></i></a>
+			</div>
+			<div class="add">
+				<a href="address.html"><p>+新增地址</p></a>
+			</div>
+			<section class="list">
+			     <ul class="list-ul">
+			         <li id="li" class="list-li">
+			             <div class="con">
+			                 	你的快递到了，请到楼下签收,你的快递到了，请到楼下签收,你的快递到了，请到楼下签收
+			                 	<a href="address.html" onclick="window.location.href = 'address.html'" ><i class="fa fa-pencil"></i></a>
+			             </div>
+			             <div class="btn delete" onclick="removeElement(this.parentElement)">删除</div>
+			         </li>
+			         <li class="list-li">
+			             <div class="con">
+			                 	哇，你在干嘛，快点来啊就等你了
+			                 	<a href="address.html" onclick="window.location.href = 'address.html'" class="delete"><i class="fa fa-pencil"></i></a>
+			             </div>
+			             <div class="btn delete" onclick="removeElement(this.parentElement)">删除</div>
+			         </li>
+			     </ul>
+			 </section>
+			 <div class="empty"></div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+ 	<script type="text/javascript" src="js/zepto.touchWipe.js"></script>
+ 	<script type="text/javascript">
+ 		 $(function() {
+	     	$('.list-li').touchWipe({itemDelete: '.btn'});
+	     });
+	     
+	    function removeElement(_element){
+			 var _parentElement = _element.parentNode;
+			 if(_parentElement){
+			  _parentElement.removeChild(_element);
+			 }
+		}
+	     
+ 	</script>
+</html>
