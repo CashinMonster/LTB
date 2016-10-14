@@ -18,6 +18,17 @@ p {
   filter: grayscale(100%);
   filter: gray;
 }
+.getLoad {
+  position: absolute;
+  bottom: 5rem;
+  width: 100%;
+}
+.getLoad span {
+  font-size: 14px;
+  width: 100%;
+  color: #ee782c;
+  text-align: center;
+}
 body,
 html {
   width: 100%;
@@ -166,9 +177,6 @@ hr {
 .search-box {
   display: none;
 }
-.active1 {
-  border-top: 2px solid #fff;
-}
 .empty {
   width: 100%;
   height: 4rem;
@@ -204,7 +212,7 @@ hr {
   border: 2px solid #fff;
   border-radius: 30px;
   box-sizing: border-box;
-  padding: 3px;
+  overflow: hidden;
 }
 #containerBox .header .headerLogin .headerImg img {
   width: 100%;
@@ -231,19 +239,28 @@ hr {
 #containerBox .header .box-menu {
   width: 100%;
   height: 50px;
-  background-color: #f2965b;
+  background-color: #eee;
   position: absolute;
   bottom: 0;
+  border-bottom: 1px solid #ccc;
 }
 #containerBox .header .box-menu span {
   display: inline-block;
   width: 49.9%;
   height: 50px;
-  color: #fff;
   font-size: 2rem;
   line-height: 50px;
   text-align: center;
   letter-spacing: 0.2rem;
+}
+#containerBox .header .box-menu a {
+  font-size: 2rem;
+  border-bottom: 2px solid #595757;
+  color: #595757;
+}
+#containerBox .header .box-menu .active1 {
+  color: #ee782c;
+  border-bottom-color: #ee782c;
 }
 #containerBox .header .box-menu #menu-left {
   position: absolute;
@@ -258,11 +275,12 @@ hr {
 #containerBox .header .box-menu p {
   display: inline-block;
   width: 0.4%;
-  height: 50px;
-  background-color: #fff;
+  height: 30px;
+  background-color: #595757;
   position: absolute;
   left: 49.9%;
   z-index: 10;
+  top: 10px;
 }
 #containerBox #search-container {
   width: 93.4%;
@@ -722,8 +740,9 @@ hr {
 }
 #login-box {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background-color: #f3f3f3;
+  padding-bottom: 2rem;
 }
 #login-box .header {
   width: 100%;
@@ -768,10 +787,10 @@ hr {
   border-radius: 4rem;
   box-sizing: border-box;
   margin: 0 auto;
+  overflow: hidden;
 }
 #login-box .center .center-box div img {
   width: 100%;
-  padding: 3px;
 }
 #login-box .center .center-box p {
   width: 100%;
@@ -829,6 +848,19 @@ hr {
 }
 #login-box .active-login1 {
   background-color: #ee782c;
+}
+#login-box ul {
+  width: 93.4%;
+  margin-left: 3.3%;
+  margin-top: 3rem;
+}
+#login-box ul li {
+  color: #ee782c;
+  font-size: 14px;
+}
+#login-box ul li span {
+  color: #595757;
+  font-size: 14px;
 }
 #address-box {
   width: 100%;
@@ -1053,7 +1085,7 @@ hr {
     border: 2px solid #fff;
     border-radius: 30px;
     box-sizing: border-box;
-    padding: 3px;
+    overflow: hidden;
   }
   #containerBox .header .headerLogin .headerImg img {
     width: 100%;
@@ -1080,19 +1112,28 @@ hr {
   #containerBox .header .box-menu {
     width: 100%;
     height: 50px;
-    background-color: #f2965b;
+    background-color: #eee;
     position: absolute;
     bottom: 0;
+    border-bottom: 1px solid #ccc;
   }
   #containerBox .header .box-menu span {
     display: inline-block;
     width: 49.9%;
     height: 50px;
-    color: #fff;
     font-size: 2rem;
     line-height: 50px;
     text-align: center;
     letter-spacing: 0.2rem;
+  }
+  #containerBox .header .box-menu a {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #595757;
+    color: #595757;
+  }
+  #containerBox .header .box-menu .active1 {
+    color: #ee782c;
+    border-bottom-color: #ee782c;
   }
   #containerBox .header .box-menu #menu-left {
     position: absolute;
@@ -1107,11 +1148,12 @@ hr {
   #containerBox .header .box-menu p {
     display: inline-block;
     width: 0.4%;
-    height: 50px;
-    background-color: #fff;
+    height: 30px;
+    background-color: #595757;
     position: absolute;
     left: 49.9%;
     z-index: 10;
+    top: 10px;
   }
   #containerBox #search-container {
     width: 93.4%;

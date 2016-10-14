@@ -26,9 +26,13 @@
 					<a href="login.html"><i class="fa fa-chevron-right"></i></a>
 				</div>
 				<div class="box-menu">
-					<span id="menu-right"  class="active1">猜你喜欢</span>
+					<span id="menu-left">
+						<a href="###" class="active1">猜你喜欢</a>
+					</span>
 					<p></p>
-					<span id="menu-left">我的优惠券</span>
+					<span id="menu-right">
+						<a href="###">我的优惠券</a>
+					</span>
 				</div>
 			</div>
 			<div id="search-container">
@@ -208,6 +212,10 @@
 				</div>
 				<div class="empty"></div>
 			</div>
+			<!--<p class="getLoad">
+				<img src="" alt="" />
+				<span>正在加载</span>
+			</p>-->
 		</div>
 		<!--href="#top"-->
 		<a href="javascript:scrollTo(0,0)" title="回到顶部" data-am-smooth-scroll class="am-icon-btn am-icon-arrow-up am-active" id="amz-go-top"></a>
@@ -261,6 +269,12 @@
 	    //---------------------------加载更多--------------------------------------
 	    $(".getMore").click(function(){
 	    	swal("乐天邦提醒您", "没有更多内容可加载");
+//			 $(".getMore").html("正在加载!");
+//			 $(".getMore").css({
+//			 	position:"absolute",
+//			 	left:"50%",
+//			 	marginLeft:"-35px"
+//			 });
 	    });
 	    
 	    
@@ -283,7 +297,7 @@
 		
 		
 		//----------------------------tab切换-----------------------------------------
-		var spans = document.querySelectorAll(".box-menu span");
+		var spans = document.querySelectorAll(".box-menu a");
 		var divs = document.querySelectorAll(".box-box");
 		for (var i=0;i<spans.length;i++){
 			spans[i].index = i;//自定义属性
